@@ -37,6 +37,39 @@ Esses genes apresentam forte conservação evolutiva, sugerindo funções essenc
 ---
 
 
+Organismo
+UniProt ID
+Nome UniProt
+
+
+Humano (Homo sapiens)
+Q9NWB1
+RFOX1_HUMAN
+
+
+Camundongo (Mus musculus)
+Q9JJ43
+RFOX1_MOUSE
+
+
+Peixe-zebra (Danio rerio)
+Q642J5
+RFOX1_DANRE
+
+
+Drosófila (D. melanogaster)
+Q7YU08
+Q7YU08_DROME
+
+
+C. elegans (Caenorhabditis elegans)
+Q10572
+FOX1_CAEEL
+
+
+
+
+
 
 > Este repositório está em desenvolvimento e será atualizado conforme o avanço do projeto de pesquisa.
 
