@@ -10,7 +10,9 @@ PALAVRAS_CHAVE = [
 ]
 
 def filtro(caminho_listas: Path, caminho_filtradas: Path):
+    caminho_listas.mkdir(exist_ok=True)
     caminho_filtradas.mkdir(exist_ok=True)
+    
     for arquivo in caminho_listas.glob("*.txt"):
         linhas_filtradas = []
         with arquivo.open("r", encoding="utf-8") as f:
@@ -29,6 +31,7 @@ def extrair_ids(arquivo: Path) -> set:
 
 
 def comparacao(caminho_comparar: Path, caminho_filtradas: Path, caminho_resultado: Path):
+    caminho_comparar.mkdir(exist_ok=True)
     caminho_resultado.mkdir(exist_ok=True)
 
     # Juntar todos os IDs dos arquivos filtrados
@@ -49,10 +52,17 @@ def comparacao(caminho_comparar: Path, caminho_filtradas: Path, caminho_resultad
 
 def main(quero_fazer_comparacao=True, quero_filtrar=True):
     base = Path(__file__).parent
+
+    # Criação dos diretórios padrão
     listas = base / "listas_proteinas"
     filtradas = base / "listas_proteinas_filtradas"
     comparar = base / "arquivos_para_comparar"
     resultado = base / "resultado_comparacao"
+
+    listas.mkdir(exist_ok=True)
+    filtradas.mkdir(exist_ok=True)
+    comparar.mkdir(exist_ok=True)
+    resultado.mkdir(exist_ok=True)
 
     if quero_filtrar:
         filtro(listas, filtradas)
